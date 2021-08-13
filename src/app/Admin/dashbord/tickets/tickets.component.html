@@ -1,0 +1,475 @@
+
+				
+    <!-- Page Content -->
+    <div class="content container-fluid">
+    
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">Tickets</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="https://smarthr.dreamguystech.com/orange/index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Tickets</li>
+                    </ul>
+                </div>
+                <div class="col-auto float-right ml-auto">
+                    <span  class="btn add-btn" data-toggle="modal" data-target="#add_ticket"  (click)="add_ticket()"><i class="fa fa-plus"></i> Add Ticket</span>
+                </div>
+            </div>
+        </div>
+        <!-- /Page Header -->
+        
+        <div class="row">
+            <div class="col-md-3">
+            <div class="stats-info">
+            <h6>New Tickets</h6>
+            <h4>12</h4>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="stats-info">
+            <h6>Solved Tickets</h6>
+            <h4>3</h4>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="stats-info">
+            <h6>Open Tickets</h6>
+            <h4>4</h4>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="stats-info">
+            <h6>Pending Tickets</h6>
+            <h4>20</h4>
+            </div>
+            </div>
+            </div>
+     <br>
+     <br>  
+        <!-- Search Filter -->
+        <div class="row filter-row">
+            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">  
+                <div class="form-group form-focus">
+                    <input type="text" class="form-control floating" [(ngModel)]="name_search">
+                    <label class="focus-label">Employee Name</label>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12"> 
+                <div class="form-group form-focus select-focus">
+                    <select class="select_floating" [(ngModel)]="status_search"> 
+                        <option></option>
+                        <option> Pending </option>
+                        <option> Approved </option>
+                        <option> Returned </option>
+                        <option> Open </option>
+                        <option> Closed</option>
+                    </select>
+                    <label class="focus-label">Status</label>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12"> 
+                <div class="form-group form-focus select-focus">
+                    <select class="select_floating"  [(ngModel)]="Priority_search"> 
+                        <option></option>
+                        <option> High </option>
+                        <option> Low </option>
+                        <option> Medium </option>
+                    </select>
+                    <label class="focus-label">Priority</label>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">  
+                <div class="form-group form-focus">
+                    <div >
+                        <input class="form-control floating datetimepicker" type="date">
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">  
+                <div class="form-group form-focus">
+                    <div>
+                        <input class="form-control floating datetimepicker" type="date">
+                    </div>
+                   <!-- <label class="focus-label">To</label> -->
+                </div>
+            </div>
+              
+        </div>
+        <!-- /Search Filter -->
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table mb-0 datatable">
+                        <thead>
+                            <tr>
+                                
+                                <th>Ticket Id</th>
+                                <th>Ticket Subject</th>
+                                <th>Assigned Staff</th>
+                                <th>Created Date</th>
+                                <th>Last Reply</th>
+                                <th>Priority</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                      
+                            <tr *ngFor="let ticket of  Tickets  | filter:name_search | filter:Priority_search | filter:status_search">
+                                
+                                <td><a class="hover_me" (click)="ticket_details()">{{ticket.Id}}</a></td>
+                                <td>{{ticket.Subject}}</td>
+                                <td>
+                                    <h2 class="table-avatar">
+                                        <a class="avatar avatar-xs" href="https://smarthr.dreamguystech.com/orange/profile.html"><img alt="" src="https://smarthr.dreamguystech.com/orange/assets/img/profiles/avatar-10.jpg"></a>
+                                        <a href="#">{{ticket.Assigned_Staff_name}}</a>
+                                    </h2>
+                                </td>
+
+                                <td>{{ticket.Created}}</td>
+                                <td>{{ticket.Last_activity}}</td>
+                                <td>{{ticket.Priority}}  </td>
+                                <td class="text-center">
+                                    <div class="dropdown action-label">
+                                        <a class="btn btn-white btn-sm btn-rounded dropdown-toggle"  aria-expanded="false" (click)="drp_down2()">
+                                            <i class="fa fa-dot-circle-o text-danger"></i>{{ticket.Status}}
+                                        </a>
+                                        <div id="drop_down2" class="dropdown-menu">
+                                            <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Open</a>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Closed</a>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Returned</a>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Pending</a>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Approved</a>
+                    
+                                            
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-right">
+                                    <div class="dropdown dropdown-action">
+                                        <span class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false" (click)="drp_down()"><i class="material-icons">more_vert</i></span>
+                                        <div id="drop_down" class="dropdown-menu dropdown-menu-right">
+                                            
+                                                <span class="dropdown-item"  data-toggle="modal" data-target="#edit_ticket"(click)="edit_ticket()"><i class="fa fa-pencil m-r-5" ></i> Edit</span>
+                                                <span class="dropdown-item" data-toggle="modal" data-target="#delete_ticket"(click)="delete_ticket()"><i class="fa fa-trash-o m-r-5"></i> Delete</span>
+                                            
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                       
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Content -->
+    
+    <!-- Add Ticket Modal -->
+    <div id="add_ticket">
+    <div   role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" >Add Ticket</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="hide()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Ticket Subject</label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Ticket Id</label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Assign Staff</label>
+                                    <select class="select_floating">
+                                        <option>-</option>
+                                        <option>Mike Litorus</option>
+                                        <option>John Smith</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Client</label>
+                                    <select class="select_floating">
+                                        <option>-</option>
+                                        <option>Delta Infotech</option>
+                                        <option>International Software Inc</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Priority</label>
+                                    <select class="select_floating">
+                                        <option>High</option>
+                                        <option>Medium</option>
+                                        <option>Low</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>CC</label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Assign</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Ticket Assignee</label>
+                                    <div class="project-members">
+                                        <a title="John Smith" data-placement="top" data-toggle="tooltip"  class="avatar">
+                                            <img src="" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Add Followers</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Ticket Followers</label>
+                                    <div class="project-members">
+                                        <a title="Richard Miles" data-toggle="tooltip"  class="avatar">
+                                            <img src="" alt="">
+                                        </a>
+                                        <a title="John Smith" data-toggle="tooltip" class="avatar">
+                                            <img src="" alt="">
+                                        </a>
+                                        <a title="Mike Litorus" data-toggle="tooltip"  class="avatar">
+                                            <img src="" alt="">
+                                        </a>
+                                        <a title="Wilmer Deluna" data-toggle="tooltip"  class="avatar">
+                                            <img src="" alt="">
+                                        </a>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Upload Files</label>
+                                    <input class="form-control" type="file">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="submit-section">
+                            <button class="btn btn-primary submit-btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- /Add Ticket Modal -->
+    
+    <!-- Edit Ticket Modal -->
+    <div id="edit_ticket" >
+    <div  role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Ticket</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="hide()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Ticket Subject</label>
+                                    <input class="form-control" type="text" value="Laptop Issue">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Ticket Id</label>
+                                    <input class="form-control" type="text" readonly value="TKT-0001">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Assign Staff</label>
+                                    <select class="select_floating">
+                                        <option>-</option>
+                                        <option selected>Mike Litorus</option>
+                                        <option>John Smith</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Client</label>
+                                    <select class="select_floating">
+                                        <option>-</option>
+                                        <option >Delta Infotech</option>
+                                        <option selected>International Software Inc</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Priority</label>
+                                    <select class="select_floating">
+                                        <option>High</option>
+                                        <option selected>Medium</option>
+                                        <option>Low</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>CC</label>
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Assign</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Ticket Assignee</label>
+                                    <div class="project-members">
+                                        <a title="John Smith" data-placement="top" data-toggle="tooltip"  class="avatar">
+                                            <img src="" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Add Followers</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Ticket Followers</label>
+                                    <div class="project-members">
+                                        <a title="Richard Miles" data-toggle="tooltip"  class="avatar">
+                                            <img src="" alt="">
+                                        </a>
+                                        <a title="John Smith" data-toggle="tooltip"  class="avatar">
+                                            <img src="" alt="">
+                                        </a>
+                                        <a title="Mike Litorus" data-toggle="tooltip"  class="avatar">
+                                            <img src="" alt="">
+                                        </a>
+                                        <a title="Wilmer Deluna" data-toggle="tooltip"  class="avatar">
+                                            <img src="" alt="">
+                                        </a>
+                                        <span class="all-team">+2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Upload Files</label>
+                                    <input class="form-control" type="file">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="submit-section">
+                            <button class="btn btn-primary submit-btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- /Edit Ticket Modal -->
+    
+    <!-- Delete Ticket Modal -->
+<div  id="delete_ticket">
+    <div   role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="form-header">
+                        <h3>Delete Ticket</h3>
+                        <p>Are you sure want to delete?</p>
+                    </div>
+                    <div class="modal-btn delete-action">
+                        <div class="row">
+                            <div class="col-6">
+                                <a  class="btn btn-primary continue-btn">Delete</a>
+                            </div>
+                            <div class="col-6">
+                                <span  data-dismiss="modal" class="btn btn-primary cancel-btn" (click)="hide()">Cancel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- /Delete Ticket Modal -->
+    
+
+
+

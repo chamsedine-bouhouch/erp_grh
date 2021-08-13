@@ -1,0 +1,1331 @@
+
+element.style {
+}
+.main-content {
+    position: relative;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+
+element.style {
+}
+.mp-box.mp-box-wide {
+    background: #eee url(//p6.zdassets.com/hc/theme_assets/38806/1752/bg-mp-box-wide.png) repeat-y top center;
+}
+.mp-box.mp-box-wide {
+    background: #fff !important;
+}
+.mp-box {
+    background: #f7f7f7;
+    margin: 0 auto;
+    position: relative;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+.mp-box:before, .mp-box:after {
+    content: " ";
+    display: table;
+}
+.mp-box:after {
+    clear: both;
+}
+.mp-box:before, .mp-box:after {
+    content: " ";
+    display: table;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+
+element.style {
+}
+.mp-box .box-row {
+    width: 1004px;
+    margin: 0 auto;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.p-b-100 {
+    padding-bottom: 100px !important;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+.mp-box .box-row:before, .mp-box .box-row:after {
+    content: " ";
+    display: table;
+}
+.mp-box .box-row:after {
+    clear: both;
+}
+.mp-box .box-row:before, .mp-box .box-row:after {
+    content: " ";
+    display: table;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+
+
+
+
+
+element.style {
+}
+.side-column {
+    width: 250px;
+    margin-left: 45px;
+}
+.main-column, .side-column {
+    display: inline-block;
+    vertical-align: top;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+article, aside, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+user agent stylesheet
+section {
+    display: block;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+element.style {
+}
+.request-details {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    font-size: 12px;
+    margin: 0 0 30px;
+    padding: 15px 20px;
+}
+.request-details {
+    margin-top: 10px !important;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+user agent stylesheet
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+
+element.style {
+}
+.main-column {
+    width: auto;
+}
+.main-column, .side-column {
+    display: inline-block;
+    vertical-align: top;
+}
+.main-column {
+    width: 653px !important;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+article, aside, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+user agent stylesheet
+section {
+    display: block;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+element.style {
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+div {
+    display: block;
+}
+.side-column ul li, ul.article-list li, ul.comment-list li, ul.search-results-list li {
+    list-style: none;
+}
+
+li {
+    text-align: -webkit-match-parent;
+}
+ul, ol, nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+user agent stylesheet
+ul {
+    list-style-type: disc;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+
+element.style {
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+user agent stylesheet
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.side-column ul li, ul.article-list li, ul.comment-list li, ul.search-results-list li {
+    list-style: none;
+}
+user agent stylesheet
+li {
+    text-align: -webkit-match-parent;
+}
+ul, ol, nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+user agent stylesheet
+ul {
+    list-style-type: disc;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+
+element.style {
+}
+.side-column ul li, ul.article-list li, ul.comment-list li, ul.search-results-list li {
+    list-style: none;
+}
+.comment, .comment-form {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.comment-list>* {
+    border-bottom: 1px solid #eee;
+    padding: 25px 0;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+user agent stylesheet
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+ul, ol, nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+user agent stylesheet
+ul {
+    list-style-type: disc;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+element.style {
+}
+body.articles main h1, body.home div.section h3, body.site_search main h1, div.boxed h1 {
+    font: 400 16px/23px Pluto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #0e0e0f;
+}
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: .8em 0;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+h1 {
+    text-shadow: 0 -1px 10px rgb(0 0 0 / 10%) !important;
+    font-size: 54px;
+    line-height: 110%;
+}
+h1, h2, h3 {
+    font-family: 'HCo_Gotham_SSm' !important;
+}
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+user agent stylesheet
+:-webkit-any(article, aside, nav, section) h1 {
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+user agent stylesheet
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+element.style {
+}
+.comment-avatar {
+    position: relative;
+    width: 85px;
+}
+.comment-form>*, .comment>* {
+    display: table-cell;
+    vertical-align: top;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+.side-column ul li, ul.article-list li, ul.comment-list li, ul.search-results-list li {
+    list-style: none;
+}
+user agent stylesheet
+li {
+    text-align: -webkit-match-parent;
+}
+ul, ol, nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+user agent stylesheet
+ul {
+    list-style-type: disc;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+}
+
+
+
+element.style {
+}
+body.articles article, div.boxed {
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    padding: 10px 25px 25px;
+    margin: 20px 0;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+
+element.style {
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+div {
+    display: block;
+}
+.side-column ul li, ul.article-list li, ul.comment-list li, ul.search-results-list li {
+    list-style: none;
+}
+
+li {
+    text-align: -webkit-match-parent;
+}
+ul, ol, nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+user agent stylesheet
+ul {
+    list-style-type: disc;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+
+element.style {
+}
+.comment-form>*, .comment>* {
+    display: table-cell;
+    vertical-align: top;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+.side-column ul li, ul.article-list li, ul.comment-list li, ul.search-results-list li {
+    list-style: none;
+}
+user agent stylesheet
+li {
+    text-align: -webkit-match-parent;
+}
+ul, ol, nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+user agent stylesheet
+ul {
+    list-style-type: disc;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+
+element.style {
+}
+.comment-list>:first-child {
+    border-top: 1px solid #eee;
+}
+.side-column ul li, ul.article-list li, ul.comment-list li, ul.search-results-list li {
+    list-style: none;
+}
+.comment, .comment-form {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.comment-list>* {
+    border-bottom: 1px solid #eee;
+    padding: 25px 0;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+user agent stylesheet
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+ul, ol, nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+user agent stylesheet
+ul {
+    list-style-type: disc;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+element.style {
+}
+body.articles main h1, body.home div.section h3, body.site_search main h1, div.boxed h1 {
+    font: 400 16px/23px Pluto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #0e0e0f;
+}
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: .8em 0;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+h1 {
+    text-shadow: 0 -1px 10px rgb(0 0 0 / 10%) !important;
+    font-size: 54px;
+    line-height: 110%;
+}
+h1, h2, h3 {
+    font-family: 'HCo_Gotham_SSm' !important;
+}
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+user agent stylesheet
+:-webkit-any(article, aside, nav, section) h1 {
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+user agent stylesheet
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+element.style {
+    background-color: #E8FAF4;
+    background-image: url(//theme.zdassets.com/theme_assets/38806/85377f7….png);
+}
+.mp-hero-new.hero-small {
+    min-height: 264px;
+}
+.mp-hero-new {
+    padding: 0;
+    min-height: 390px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.mp-box {
+    background: #f7f7f7;
+    margin: 0 auto;
+    position: relative;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+article, aside, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+user agent stylesheet
+header {
+    display: block;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+.mp-box:before, .mp-box:after {
+    content: " ";
+    display: table;
+}
+.mp-box:after {
+    clear: both;
+}
+.mp-box:before, .mp-box:after {
+    content: " ";
+    display: table;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+element.style {
+    font-size: 45px;
+}
+.mp-hero-new.hero-small .hero-text h1 {
+    max-width: 900px;
+}
+.mp-hero-new .hero-text h1 {
+    font: normal 50px/50px 'Pluto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #fff;
+    letter-spacing: -1px;
+    overflow: hidden;
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+    text-shadow: 0 -1px 2px rgb(0 0 0 / 30%);
+}
+.box-row.hero-text h1 {
+    color: #000 !important;
+    text-shadow: none !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #0e0e0f;
+}
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: .8em 0;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+h1 {
+    text-shadow: 0 -1px 10px rgb(0 0 0 / 10%) !important;
+    font-size: 54px;
+    line-height: 110%;
+}
+h1, h2, h3 {
+    font-family: 'HCo_Gotham_SSm' !important;
+}
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+user agent stylesheet
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.mp-hero-new .hero-text {
+    position: absolute;
+    z-index: 5;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    max-width: 100%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+element.style {
+}
+.request-id {
+    color: #bebebe;
+}
+.request-id {
+    display: block;
+    font-size: 13px;
+}
+main, main *, main input[type=search] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body.articles main h1, body.home div.section h3, body.site_search main h1, div.boxed h1 {
+    font: 400 16px/23px Pluto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #0e0e0f;
+}
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: .8em 0;
+}
+h1 {
+    text-shadow: 0 -1px 10px rgb(0 0 0 / 10%) !important;
+    font-size: 54px;
+    line-height: 110%;
+}
+h1, h2, h3 {
+    font-family: 'HCo_Gotham_SSm' !important;
+}
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+user agent stylesheet
+:-webkit-any(article, aside, nav, section) h1 {
+    font-size: 1.5em;
+}
+user agent stylesheet
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+body {
+    font: 14px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #fff;
+    font: 12px/120% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-width: 1024px;
+    color: #555555;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+::selection {
+    background: #D5D4D2;
+    color: #fff;
+    text-shadow: none;
+}

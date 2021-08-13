@@ -1,0 +1,47 @@
+div.boxed {
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    padding: 10px 25px 25px;
+    margin: 10%;
+  margin-top: 2%;}
+    .dashnav
+    {
+       margin:10px;
+    }
+    .dashnav:hover{
+       color:red;
+       cursor: pointer;
+    }
+    #title
+    {
+     
+      margin-left: 10%;
+      font-weight: 600;
+      font-size: 24px;
+    }
+    #navbar
+    {
+      margin-bottom: 100px;
+    }
+    .bg-light {
+      background-color: #ffffff!important;
+  }
+  .form-inline
+  {
+    margin-right: 10%;
+  }
+  .navbar-brand
+  {
+    margin-left: 10%;
+  }
+  #inovices
+  {
+display:none;
+
+  }
+  
+  #avatar
+  {
+    width: 35px;
+    margin-left: 10px;
+  }

@@ -1,0 +1,200 @@
+<div class="chat-main-row">
+    <div class="chat-main-wrapper"  *ngFor="let ticket of Ticket">
+    <div class="col-lg-8 message-view task-view">
+    <div class="chat-window">
+    <div class="fixed-header">
+    <div class="navbar">
+    <div class="float-left ticket-view-details">
+    <div class="ticket-header">
+    <span>Status: </span> <span class="badge badge-warning">{{ticket.status}}</span> <span class="m-l-15 text-muted">Client: </span>
+    <a >{{ticket.Client_name}}</a>
+    <span class="m-l-15 text-muted">Created: </span>
+    <span>{{ticket.created}} </span>
+    <span class="m-l-15 text-muted">Created by:</span>
+    <span><a href="profile.html">{{ticket.Client_name}}</a></span>
+    </div>
+    </div>
+    <a class="task-chat profile-rightbar float-right" id="task_chat" href="#task_window"><i class="fa fa fa-comment"></i></a>
+    </div>
+    </div>
+    <div class="chat-contents">
+    <div class="chat-content-wrap">
+    <div class="chat-wrap-inner">
+    <div class="chat-box">
+    <div class="task-wrapper">
+    <div class="card">
+    <div class="card-body">
+    <div class="project-title">
+    <div class="m-b-20">
+    <span class="h5 card-title ">{{ticket.Issue}}</span>
+    <div class="float-right ticket-priority"><span>Priority:</span>
+    <div class="btn-group">
+    <a   class="badge badge-danger" >{{ticket.Priority}}</a>
+   
+    </div>
+    </div>
+    </div>
+    </div>
+    <p>{{ticket.Description}} </p>
+    </div>
+    </div>
+   
+    <div class="card mb-0">
+    <div class="card-body">
+    <h5 class="card-title m-b-20">Uploaded files</h5>
+    <ul class="files-list">
+    <li>
+    <div class="files-cont">
+    <div class="file-type">
+    <span class="files-icon"><i class="fa fa-file-pdf-o"></i></span>
+    </div>
+    <div class="files-info">
+    <span class="file-name text-ellipsis"><a >{{ticket.file}}</a></span>
+    
+    <div class="file-size">Size: 14.8Mb</div>
+    </div>
+    <ul class="files-action">
+        
+    <li class="text-right">
+        <div class="dropdown dropdown-action">
+            <span class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false" (click)="drp_down()"><i class="material-icons">more_vert</i></span>
+            <div id="drop_down" class="dropdown-menu dropdown-menu-right">
+                
+                    <span class="dropdown-item"  data-toggle="modal" data-target="#edit_ticket"(click)="Download()"><i class="fa fa-pencil m-r-5" ></i> Download</span>
+                    <span class="dropdown-item" data-toggle="modal" data-target="#delete_ticket"(click)="Share()"><i class="fa fa-trash-o m-r-5"></i> Share</span>
+                    <span class="dropdown-item" data-toggle="modal" data-target="#delete_ticket"(click)="delete_file()"><i class="fa fa-trash-o m-r-5"></i> Delete</span>
+            </div>
+        </div>
+    </li>
+    </ul>
+   
+    </div>
+    </li>
+    <li></li>
+    <li>
+        <div class="row">
+           
+            <div class="leave-row">
+                <div class="leave-left">
+                <div class="input-box">
+                <div class="form-group">
+                    <h5 class="card-title m-b-20">Action</h5>
+               
+                    
+                    
+               
+                </div>
+                </div>
+                </div>
+                <div class="leave-right">
+                   
+                    <button class="btn btn-primary leave-save-btn" type="submit">Close Ticket</button></div>
+                </div>
+           
+        </div>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+
+    
+    
+       
+
+   
+   
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-4 message-view task-chat-view ticket-chat-view" id="task_window">
+    <div class="chat-window">
+    <div class="fixed-header">
+    <div class="navbar">
+    <div class="task-assign">
+    <span class="assign-title">Assigned to </span>
+    <a  data-toggle="tooltip" data-placement="bottom" title="" class="avatar" >{{ticket.Assigned_to}}
+    <img src="assets/img/profiles/avatar-02.jpg" alt="">
+    </a>
+   
+    </div>
+
+
+
+    <ul class="nav float-right custom-menu">
+        <li class="text-right">
+            <div class="dropdown dropdown-action">
+                <span class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false" (click)="drp_down2()"><i class="material-icons">more_vert</i></span>
+                <div id="drop_down2" class="dropdown-menu dropdown-menu-right">
+                    
+                        <span class="dropdown-item"  data-toggle="modal" data-target="#edit_ticket"(click)="Edit_ticket()"><i class="fa fa-pencil m-r-5" ></i> Edit Ticket</span>
+                        <span class="dropdown-item" data-toggle="modal" data-target="#delete_ticket"(click)="Delete_ticket()"><i class="fa fa-trash-o m-r-5"></i> Delete </span>
+                      
+                </div>
+            </div>
+        </li>
+    </ul>
+    </div>
+    </div>
+    <div class="chat-contents task-chat-contents">
+    <div class="chat-content-wrap">
+    <div class="chat-wrap-inner">
+    <div class="chat-box">
+    <div class="chats">
+    <div class="chat chat-left" *ngFor="let chat of chat">
+    <div class="chat-avatar">
+    <a href="profile.html" class="avatar">
+    <img src="assets/img/profiles/avatar-02.jpg" alt="">
+    </a>
+    </div>
+    <div class="chat-body">
+    <div class="chat-bubble" >
+    <div class="chat-content">
+    <span class="task-chat-user">{{chat.user_name}}</span> <span class="chat-time">{{chat.time}}</span>
+    
+    <p>{{chat.msg}} </p>
+    </div>
+    </div>
+    </div>
+    </div>
+
+  
+   
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="chat-footer">
+        <div class="message-bar">
+        <div class="message-inner">
+        <a class="link attach-icon"><img src="assets/img/attachment.png" alt=""></a>
+        <div class="message-area">
+        <div class="input-group">
+        <textarea class="form-control" placeholder="Type message..."></textarea>
+        <span class="input-group-append">
+        <button class="btn btn-primary" type="button"><i class="fa fa-send"></i></button>
+        </span>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="project-members task-followers">
+            <span class="followers-title">Followers</span>
+            <a  data-toggle="tooltip" title="" class="avatar"   *ngFor="let followers of followers">
+            <img src="assets/img/profiles/avatar-09.jpg" alt="">{{followers.Name}}
+            </a>
+     
+        
+       
+       
+        </div>
+        </div>
+   
+    </div>
+    </div>
+    </div>
+    </div>

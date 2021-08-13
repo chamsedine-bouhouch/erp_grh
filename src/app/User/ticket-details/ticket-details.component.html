@@ -1,0 +1,92 @@
+<body class="hc page_en page_us requests page_4454830 page_ new validation_error user_end_user user_loggedin">
+  
+  
+
+    <div id="main-wrapper">
+  
+  
+  
+  
+  
+    <main role="main">
+      <div class="main-content">
+  
+      <header class="mp-box mp-hero-new hero-small js-hero-fader" style="background-color: #E8FAF4;background-image: url(//theme.zdassets.com/theme_assets/38806/85377f76086f5f19b797e9fad77e4d4f6dc15934.png)">
+  
+          <div class="hero-container"></div>
+        <div class="hero-slide js-hero-slide"></div>
+  
+          <div class="box-row hero-text">
+              <h1 style="font-size:45px">My Support Requests</h1>
+          </div>
+  
+          <div class="box-row mp-hero-connector"></div>
+  
+        
+      </header>
+  
+        <div class="mp-box mp-box-wide">
+          <div class="box-row p-b-100">
+              <br>
+            <button routerlink="dashbord" style="color:black;font-weight: bold;font-weight: bold"> ↩ Back </button>           
+  <div class="boxed">
+  
+    <section class="main-column">
+      
+      <h1>
+        <span class="request-id">Request #4454830</span>
+        asking for permission 
+      </h1>
+      <ul class="comment-list" *ngFor="let conversation of  conversations ">
+        
+        
+        
+       
+        
+          <li id="request_comment_655467794777" class="comment">
+            <div class="comment-avatar ">
+              <img src="" alt="Avatar">
+            </div>
+            <div class="comment-container">
+              <strong class="comment-author"> {{conversation.name}}</strong>
+              <span class="comment-published">{{conversation.date}}{{conversation.time}}</span>
+              <br>
+              <div class="comment-body"><div class="zd-comment" ><p >{{conversation.message}}
+  
+          </p>
+          </div></div>
+              
+            </div>
+          </li>
+        
+          
+        
+      </ul>
+  
+      
+      <div class="request-follow-up">
+        <div class="form-group">
+          <br>
+          <br>
+          <label for="Description">follow-up</label>
+          <textarea class="form-control" id="Description" rows="3"></textarea>
+        </div>
+        
+      </div>
+  
+      <button type="submit" class="btn btn-primary">send</button>
+      
+    </section>
+  
+    <section class="side-column">
+    
+      <!--<a role="button" href="/hc/en-us/requests/new">Submit a request</a>-->
+      <button style="background-color: white"  routerLink="../submit_ticket">Submit a new request</button>
+    </section>
+  
+  </div>
+    </div></div></div></main>
+  
+   
+  
+  

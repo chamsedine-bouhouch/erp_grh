@@ -1,0 +1,138 @@
+<div class="content container-fluid">
+
+    <div class="page-header">
+    <div class="row align-items-center">
+    <div class="col">
+    <h3 class="page-title">Department</h3>
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"(click)="dashbord()">Dashboard</li>
+    <li class="breadcrumb-item active">Department</li>
+    </ul>
+    </div>
+    <div class="col-auto float-right ml-auto">
+    <a  (click)="add_department()" class="btn add-btn" data-toggle="modal" data-target="#add_department"><i class="fa fa-plus"></i> Add Department</a>
+    </div>
+    </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-12">
+    <div>
+    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+        
+                <div class="row">
+        <div class="col-sm-12">
+        <table class="table table-striped custom-table mb-0 datatable dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+    <thead>
+    <tr role="row"><th style="width: 30px;" class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#: activate to sort column descending">#</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Department Name: activate to sort column ascending" style="width: 730.638px;">Department Name</th><th class="text-right sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 318.562px;">Action</th></tr>
+    </thead>
+    <tbody>
+    
+    
+    
+    
+    
+    
+    <tr class="odd" *ngFor="let department of Department" >
+    <td class="sorting_1">{{department .Id}}</td>
+    <td>{{department .Name}}</td>
+    <td class="text-right">
+        <div class="dropdown dropdown-action">
+            <span class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false" (click)="drp_down()"><i class="material-icons">more_vert</i></span>
+            <div id="drop_down" class="dropdown-menu dropdown-menu-right">
+                <span class="dropdown-item"  data-toggle="modal" data-target="#edit_ticket"(click)="edit_department()"><i class="fa fa-pencil m-r-5" ></i> Edit</span>
+                <span class="dropdown-item" data-toggle="modal" data-target="#delete_ticket"(click)="delete_department()"><i class="fa fa-trash-o m-r-5"></i> Delete</span>
+            </div>
+        </div>
+    </td>
+    </tr>
+
+   </tbody>
+    </table>
+</div>
+</div>
+ 
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+    <div id="add_department" class="pop_up" >
+        <div>
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">Add Department</h5>
+        <button  (click)="hide()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        <form>
+        <div class="form-group">
+        <label>Department Name <span class="text-danger">*</span></label>
+        <input class="form-control" type="text">
+        </div>
+        <div class="submit-section">
+        <button class="btn btn-primary submit-btn">Submit</button>
+        </div>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
+       </div>
+        
+        <div id="edit_department"  class="pop_up">
+            <div>
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title">Edit Department</h5>
+        <button  (click)="hide()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        <form>
+        <div class="form-group">
+        <label>Department Name <span class="text-danger">*</span></label>
+        <input class="form-control" value="IT Management" type="text">
+        </div>
+        <div class="submit-section">
+        <button class="btn btn-primary submit-btn">Save</button>
+        </div>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+        
+        <div id="delete_department" class="pop_up">
+            <div>
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-body">
+        <div class="form-header">
+        <h3>Delete Department</h3>
+        <p>Are you sure want to delete?</p>
+        </div>
+        <div class="modal-btn delete-action">
+        <div class="row">
+        <div class="col-6">
+        <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+        </div>
+        <div class="col-6">
+        <a  (click)="hide()"data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>

@@ -1,0 +1,142 @@
+
+				
+    <!-- Page Content -->
+    <div class="content container-fluid">
+    
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">Tickets</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="https://smarthr.dreamguystech.com/orange/index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Tickets</li>
+                    </ul>
+                </div>
+            
+            </div>
+        </div>
+        <!-- /Page Header -->
+        
+        <div class="row">
+            <div class="col-md-3">
+            <div class="stats-info">
+            <h6>assigned ticket</h6>
+            <h4>12</h4>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="stats-info">
+            <h6>Solved Tickets</h6>
+            <h4>3</h4>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="stats-info">
+            <h6>Open Tickets</h6>
+            <h4>4</h4>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <div class="stats-info">
+            <h6>closed Tickets</h6>
+            <h4>5</h4>
+            </div>
+            </div>
+            </div>
+     <br>
+     <br>  
+        <!-- Search Filter -->
+        <div class="row filter-row">
+           
+            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12"> 
+                <div class="form-group form-focus select-focus">
+                    <select class="select_floating" [(ngModel)]="status_search"> 
+                        <option></option>
+                        <option> Pending </option>
+                        <option> Approved </option>
+                        <option> Returned </option>
+                        <option> Open </option>
+                        <option> Closed</option>
+                    </select>
+                    <label class="focus-label">Status</label>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12"> 
+                <div class="form-group form-focus select-focus">
+                    <select class="select_floating"  [(ngModel)]="Priority_search"> 
+                        <option></option>
+                        <option> High </option>
+                        <option> Low </option>
+                        <option> Medium </option>
+                    </select>
+                    <label class="focus-label">Priority</label>
+                </div>
+            </div>
+           
+           
+              
+        </div>
+        <!-- /Search Filter -->
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table mb-0 datatable">
+                        <thead>
+                            <tr>
+                                
+                                <th>Ticket Id</th>
+                                <th>Ticket Subject</th>
+                             
+                                <th>Created Date</th>
+                                <th>Last Reply</th>
+                                <th>Priority</th>
+                                <th class="text-center">Status</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                      
+                            <tr *ngFor="let ticket of  Tickets  | filter:Priority_search | filter:status_search">
+                                
+                                <td><a class="hover_me" (click)="ticket_details()">{{ticket.Id}}</a></td>
+                                <td>{{ticket.Subject}}</td>
+                              
+
+                                <td>{{ticket.Created}}</td>
+                                <td>{{ticket.Last_activity}}</td>
+                                <td>{{ticket.Priority}}  </td>
+                                <td >  {{ticket.Status}}  </td>
+                                    
+                                          
+                                       
+                                    
+                                   
+                              
+                               
+                            </tr>
+                       
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Content -->
+    
+    <!-- Add Ticket Modal -->
+  
+    <!-- /Add Ticket Modal -->
+    
+    <!-- Edit Ticket Modal -->
+
+    <!-- /Edit Ticket Modal -->
+    
+
+    <!-- /Delete Ticket Modal -->
+    
+
+
+

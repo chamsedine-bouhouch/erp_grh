@@ -1,0 +1,42 @@
+#background
+{
+    position: relative;
+   
+}
+ .sub_container{
+    position: absolute;
+    top: 65%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+ }
+
+
+.main_container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+
+.more-btn {
+    position: relative;
+    z-index: 1;
+    
+    color: #fff;
+   border-radius: 40px;
+   padding-top: 10px;
+   padding-right: 20px;
+   padding-bottom: 10px;
+   padding-left: 20px;
+   background-color: #FF214F;
+   font-size: 23px;
+}
+
+a {
+    color: #ff0062;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+

@@ -1,0 +1,127 @@
+
+    <!-- Page Content -->
+    <div class="content container-fluid">
+    
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">Invoices</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Invoices</li>
+                    </ul>
+                </div>
+                <div class="col-auto float-right ml-auto">
+                    <a class="btn add-btn" (click)="Create_Invoice()"><i class="fa fa-plus" (click)="Create_Invoice()"></i> Create Invoice</a>
+                </div>
+            </div>
+        </div>
+        <!-- /Page Header -->
+        
+        <!-- Search Filter -->
+        <div class="row filter-row">
+            <div class="col-sm-6 col-md-3">  
+                <div class="form-group form-focus">
+                    <div class="cal-icon">
+                        <input class="form-control floating datetimepicker" type="text">
+                    </div>
+                    <label class="focus-label">From</label>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">  
+                <div class="form-group form-focus">
+                    <div class="cal-icon">
+                        <input class="form-control floating datetimepicker" type="text">
+                    </div>
+                    <label class="focus-label">To</label>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3"> 
+                <div class="form-group form-focus select-focus">
+                    <select class="select_floating"> 
+                        <option>Select Status</option>
+                        <option>Pending</option>
+                        <option>Paid</option>
+                        <option>unpaid</option>
+                    </select>
+                    <label class="focus-label">Status</label>
+                </div>
+            </div>
+            
+        </div>
+        <!-- /Search Filter -->
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table mb-0">
+                        <thead>
+                            <tr>
+                                
+                                <th>Invoice Number</th>
+                                <th>Client</th>
+                                <th>Created Date</th>
+                                <th>Due Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th class="text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let inovices of Inovices">
+                                
+                                <td><a class="hover_me" (click)="view_Invoice()">{{inovices.Invoice_Number}}</a></td>
+                                <td>{{inovices.Client}}</td>
+                                <td>{{inovices.Created}}</td>
+                                <td>{{inovices.Due}}</td>
+                                <td>{{inovices.Amount}}</td>
+                                <td><span class="badge bg-inverse-success">{{inovices.Status}}</span></td>
+                                <td class="text-right">
+                                    <div class="dropdown dropdown-action">
+                                        <span  class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false" (click)="drp_down()"><i class="material-icons">more_vert</i></span>
+                                        <div id="drop_down" class="dropdown-menu dropdown-menu-right">
+                                            <span class="dropdown-item" ><i class="fa fa-pencil m-r-5"></i> Edit</span>
+                                            <span  (click)="view_Invoice()" class="dropdown-item" ><i class="fa fa-eye m-r-5"></i> View</span>
+                                            
+                                            <span  class="dropdown-item"(click)="delete_inovices()" ><i class="fa fa-trash-o m-r-5" ></i> Delete</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                         
+                         
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Content -->
+    
+
+    <div id="delete_inovices">
+        <div  role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="form-header">
+                            <h3>Delete Salary</h3>
+                            <p>Are you sure want to delete?</p>
+                        </div>
+                        <div class="modal-btn delete-action">
+                            <div class="row">
+                                <div class="col-6">
+                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn" (click)="hide1()">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

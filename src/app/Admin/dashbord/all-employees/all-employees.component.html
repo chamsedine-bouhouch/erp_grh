@@ -1,0 +1,359 @@
+<div class="content container-fluid">
+				
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Employee</h3>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"(click)="dashbord()">Dashboard</li>
+                    <li class="breadcrumb-item active">Employee</li>
+                </ul>
+            </div>
+            <div class="col-auto float-right ml-auto">
+                <a  class="btn add-btn" data-toggle="modal" data-target="#add_employee"(click)=" add_employee()"><i class="fa fa-plus"></i> Add Employee</a>
+          
+            </div>
+        </div>
+    </div>
+    <!-- /Page Header -->
+    
+    <!-- Search Filter -->
+    <div class="row filter-row">
+        <div class="col-sm-6 col-md-3">  
+            <div class="form-group form-focus">
+                <input type="text" class="form-control floating"  [(ngModel)]="searchedKeyword">
+                <label class="focus-label">Employee ID</label>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3">  
+            <div class="form-group form-focus">
+                <input type="text" class="form-control floating"  [(ngModel)]="searchedKeyword2">
+                <label class="focus-label">Employee Name</label>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3"> 
+            <div class="form-group form-focus select-focus focused">
+                <select   [(ngModel)]="searchedKeyword3" class="select_floating select2-hidden-accessible" data-select2-id="select2-data-1-njio" tabindex="-1" aria-hidden="true"> 
+                    <option  ></option>
+                    <option>Web Developer</option>
+                    <option>Web Designer</option>
+                    <option>Android Developer</option>
+                    <option>Ios Developer</option>
+                </select>
+                <label class="focus-label">Designation</label>
+
+
+                
+            </div>
+        </div>
+       
+    </div>
+    <!-- /Search Filter -->
+   
+
+    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+       
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-striped custom-table datatable dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+        <thead>
+        <tr role="row">
+            <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 174.038px;"> Name</th>
+                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Employee ID: activate to sort column ascending" style="width: 109.588px;">Employee ID</th>
+                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 226.55px;">Email</th>
+                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Mobile: activate to sort column ascending" style="width: 82.95px;">Mobile</th>
+                <th class="text-nowrap sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Join Date: activate to sort column ascending" style="width: 86.925px;">Join Date</th>
+                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending" style="width: 138.775px;">Role</th>
+                <th class="text-right no-sort sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 60.375px;">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+        
+        <tr class="odd"  *ngFor="let employee of Employees  | filter:searchedKeyword | filter:searchedKeyword2 | filter:searchedKeyword3">
+        <td class="sorting_1">
+        <h2 class="table-avatar">
+        <a  class="avatar"><img alt="" src="assets/img/profiles/avatar-13.jpg"></a>
+        <a >{{employee.name}} </a>
+        </h2>
+        </td>
+        <td>{{employee.Id}}</td>
+        <td>{{employee.Email}}</td>
+        <td>{{employee.Mobile}}</td>
+     
+        <td>{{employee.Join_Date}}</td>
+        <td> {{employee.Role}}</td>
+
+        <td class="text-right">
+            <div class="dropdown dropdown-action">
+                <span class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false" (click)="drp_down()"><i class="material-icons">more_vert</i></span>
+                <div id="drop_down" class="dropdown-menu dropdown-menu-right">
+                    <span class="dropdown-item"  data-toggle="modal" data-target="#edit_ticket"(click)="edit_employee()"><i class="fa fa-pencil m-r-5" ></i> Edit</span>
+                    <span class="dropdown-item" data-toggle="modal" data-target="#delete_ticket"(click)="delete_employee()"><i class="fa fa-trash-o m-r-5"></i> Delete</span>
+                </div>
+            </div>
+        </td>
+        </tr>
+        
+        
+      </tbody>
+        </table
+        ></div>
+    </div>
+        
+</div>
+
+
+
+<!--********************************************        add_employee      *******************************************-->
+
+<div id="add_employee" >
+    <div id="pop_up" class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h5 class="modal-title">Add Employee</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"  (click)="hide()">
+    <span aria-hidden="true">×</span>
+    </button>
+    </div>
+    <div class="modal-body">
+    <form>
+    <div class="row">
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">First Name <span class="text-danger">*</span></label>
+    <input class="form-control" type="text">
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Last Name</label>
+    <input class="form-control" type="text">
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Username <span class="text-danger">*</span></label>
+    <input class="form-control" type="text">
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Email <span class="text-danger">*</span></label>
+    <input class="form-control" type="email">
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Password</label>
+    <input class="form-control" type="password">
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Confirm Password</label>
+    <input class="form-control" type="password">
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Employee ID <span class="text-danger">*</span></label>
+    <input type="text" class="form-control">
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Joining Date <span class="text-danger">*</span></label>
+    <div ><input class="form-control datetimepicker" type="date"></div>
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Phone </label>
+    <input class="form-control" type="text">
+    </div>
+    </div>
+   
+
+
+    <div class="col-md-6">
+    <div class="form-group">
+    <label>Department <span class="text-danger">*</span></label>
+    <br>
+    <select class="select_floating select2-hidden-accessible" data-select2-id="select2-data-7-hp0a" tabindex="-1" aria-hidden="true">
+    <option data-select2-id="select2-data-9-4vgx">Select Department</option>
+    <option>Web Development</option>
+    <option>IT Management</option>
+     <option>Marketing</option>
+    </select>
+    
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label>Designation <span class="text-danger">*</span></label>
+    <br>
+    <select class="select_floating select2-hidden-accessible" data-select2-id="select2-data-10-7wi7" tabindex="-1" aria-hidden="true">
+    <option data-select2-id="select2-data-12-v3y4">Select Designation</option>
+    <option>Web Designer</option>
+    <option>Web Developer</option>
+    <option>Android Developer</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    <div class="table-responsive m-t-15">
+    <table class="table table-striped custom-table">
+    <thead>
+   
+    </thead>
+    
+    </table>
+    </div>
+    <div class="submit-section">
+    <button class="btn btn-primary submit-btn">Submit</button>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+<!--***********************************************        edit_employee    **********************************************-->
+
+<div id="edit_employee"  >
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+    <h5 class="modal-title">Edit Employee</h5>
+    <button type="button" class="close" data-dismiss="modal" (click)="hide()" aria-label="Close">
+    <span aria-hidden="true">×</span>
+    </button>
+    </div>
+    <div class="modal-body">
+    <form>
+    <div class="row">
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">First Name <span class="text-danger">*</span></label>
+    <input class="form-control" value="John" type="text">
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Last Name</label>
+    <input class="form-control" value="Doe" type="text">
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Username <span class="text-danger">*</span></label>
+    <input class="form-control" value="johndoe" type="text">
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Email <span class="text-danger">*</span></label>
+    <input class="form-control" value="johndoe@example.com" type="email">
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Password</label>
+    <input class="form-control" value="johndoe" type="password">
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Confirm Password</label>
+    <input class="form-control" value="johndoe" type="password">
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Employee ID <span class="text-danger">*</span></label>
+    <input type="text" value="FT-0001" readonly="" class="form-control floating">
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Joining Date <span class="text-danger">*</span></label>
+    <div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+    <label class="col-form-label">Phone </label>
+    <input class="form-control" value="9876543210" type="text">
+    </div>
+    </div>
+    
+    <div class="col-md-6">
+    <div class="form-group">
+    <label>Department <span class="text-danger">*</span></label>
+    <select class="select_floating select2-hidden-accessible" data-select2-id="select2-data-16-gqgk" tabindex="-1" aria-hidden="true">
+    <option data-select2-id="select2-data-18-tevq">Select Department</option>
+    <option>Web Development</option>
+    <option>IT Management</option>
+    <option>Marketing</option>
+    </select>
+    
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label>Designation <span class="text-danger">*</span></label>
+    <select class="select_floating select2-hidden-accessible" data-select2-id="select2-data-19-iywd" tabindex="-1" aria-hidden="true">
+    <option data-select2-id="select2-data-21-puz7">Select Designation</option>
+    <option>Web Designer</option>
+    <option>Web Developer</option>
+    <option>Android Developer</option>
+    </select>
+    
+    </div>
+    </div>
+    </div>
+    <div class="table-responsive m-t-15">
+    <table class="table table-striped custom-table">
+   
+   
+    </table>
+    </div>
+    <div class="submit-section">
+    <button class="btn btn-primary submit-btn">Save</button>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+  
+
+    <!-- **************************************************   delete_employee   ***************************************************-->
+
+    <div  id="delete_employee" >
+        <div>
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-body">
+        <div class="form-header">
+        <h3>Delete Employee</h3>
+        <p>Are you sure want to delete?</p>
+        </div>
+        <div class="modal-btn delete-action">
+        <div class="row">
+        <div class="col-6">
+        <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+        </div>
+        <div class="col-6">
+        <a  data-dismiss="modal" class="btn btn-primary cancel-btn" (click)="hide()">Cancel</a>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>

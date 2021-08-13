@@ -1,0 +1,58 @@
+
+<!---
+<div class="container">
+  <div class="card inner-main">
+    <div class="card-header">
+      User Profile
+      <a class="nav-link navbar-brand" href="#" routerLink="/logout">Logout</a>
+    </div>
+    <div class="card-body">
+      <p class="card-text">Name: <strong>{{ UserProfile?.name }}</strong></p>
+      <p class="card-text">Email: <strong>{{ UserProfile?.email }}</strong></p>
+    </div>
+  
+  </div>
+</div>
+
+-->
+
+
+
+
+<nav class="navbar navbar-light bg-light justify-content-between" id="navbar">
+    <a class="navbar-brand">logo</a>
+    <div class="form-inline">
+      
+          
+      
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        
+        <li class="nav-item avatar dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+           
+            <span class="navbar-text">
+              user name  
+             </span>
+            <img  (click)="drop_menu()" id="avatar" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="" class="img-fluid rounded-circle z-depth-0">
+          </a>
+         
+            <div id="drop_down" >
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">My account</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Log out</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+ 
+  <span id="title">welcom User Name </span> <!--    user name -->
+<div class="boxed">
+    <span class="dashnav"  (click)=" show2()">My Support Request </span>
+    <span class="dashnav" (click)=" show1()">  My inovices</span>
+    <hr>
+<div  id="ticket">
+<app-myticket></app-myticket>
+</div>
+<div  id="inovices">
+  <app-inovices></app-inovices>
+  </div>

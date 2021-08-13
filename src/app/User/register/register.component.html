@@ -1,0 +1,66 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN9PKKF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Login 7 start -->
+<div class="login-7">
+<div class="container">
+<div class="row login-box">
+<div class="col-lg-5 col-md-12 bg-img none-992 col-pad-0 align-self-center">
+  <div class="info">
+      <div class="logo clearfix">
+          <a href="login-7.html">
+            <img src="assets/images/logos/logo_1.png" alt="logo">
+          </a>
+      </div>
+      <div class="btn-section clearfix">
+          <a routerLink="/login" class="link-btn active btn-1">Login</a>
+          <div class="clearfix"></div>
+          <a routerLink="/register" class="link-btn btn-1 default-bg">Register</a>
+      </div>
+
+  </div>
+</div>
+<div class="col-lg-7 col-md-12 bg-color-16 align-self-center">
+  <div class="form-section">
+      <div class="logo-2 clearfix">
+          <a href="login-7.html">
+            <img src="assets/images/logos/logo_2.png" alt="logo">
+          </a>
+      </div>
+      <h3>Create an account</h3>
+      <div class="login-inner-form">
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <div class="form-group form-box">
+                  <input type="text" name="name" class="input-text" placeholder="Full Name" formControlName="name">
+                  <i class="flaticon-user"></i>
+              </div>
+              <div class="form-group form-box">
+                  <input type="email" name="email" class="input-text" placeholder="Email Address" formControlName="email">
+                  <i class="flaticon-mail-2"></i>
+              </div>
+              <div class="form-group form-box">
+                  <input type="password" name="Password" class="input-text" placeholder="Password" formControlName="password">
+                  <i class="flaticon-password"></i>
+              </div>
+
+              <div class="checkbox clearfix">
+                  <div class="form-check checkbox-theme">
+                      <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                      <label class="form-check-label" for="rememberMe">
+                          I agree to the <a href="#">terms of service</a>
+                      </label>
+                  </div>
+              </div>
+              <div class="form-group mb-0">
+                  <button type="submit" class="btn-md btn-theme btn-block">Register</button>
+              </div>
+              <p class="text">Already a member?<a routerLink="/login"> Login here</a></p>
+          </form>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+</div>

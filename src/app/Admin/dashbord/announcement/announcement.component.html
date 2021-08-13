@@ -1,0 +1,194 @@
+
+			
+    <!-- Page Content -->
+    <div class="content container-fluid">
+    
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">Announcement</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"(click)="dashbord()">Dashboard</li>
+                        <li class="breadcrumb-item active">Announcement</li>
+                    </ul>
+                </div>
+                <div class="col-auto float-right ml-auto">
+                    <a  (click)="add_Announcement()"class="btn add-btn" data-toggle="modal" ><i class="fa fa-plus"></i> Add Announcement</a>
+                </div>
+            </div>
+        </div>
+        <!-- /Page Header -->
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table mb-0">
+                        <thead>
+                            <tr>
+                              
+                                <th>Title </th>
+                                <th>Start</th>
+                                <th>End</th>
+                                <th class="text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         
+                          
+
+                          
+                            <tr  *ngFor="let announcement of Announcement"    >
+                                
+                                <td>{{announcement.Title}}</td>
+                                <td>{{announcement.start}}</td>
+                                <td>{{announcement.end}}</td>
+                              
+
+                                <td class="text-right">
+                                    <div class="dropdown dropdown-action">
+                                        <span class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false" (click)="drp_down()"><i class="material-icons">more_vert</i></span>
+                                        <div id="drop_down" class="dropdown-menu dropdown-menu-right">
+                                            <span class="dropdown-item"  data-toggle="modal" (click)="edit_Announcement()"><i class="fa fa-pencil m-r-5" ></i> Edit</span>
+                                            <span class="dropdown-item" data-toggle="modal" (click)="delete_Announcement()"><i class="fa fa-trash-o m-r-5"></i> Delete</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                         <!--
+                            <tr class="holiday-completed">
+                                <td>8</td>
+                                <td>Christmas</td>
+                                <td>25 Dec 2019</td>
+                                <td>Monday</td>
+                                <td class="text-right">
+                                    <div class="dropdown dropdown-action">
+                                        <span class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false" (click)="drp_down()"><i class="material-icons">more_vert</i></span>
+                                        <div id="drop_down" class="dropdown-menu dropdown-menu-right">
+                                            <span class="dropdown-item"  data-toggle="modal" data-target="#edit_ticket"(click)="edit_holiday()"><i class="fa fa-pencil m-r-5" ></i> Edit</span>
+                                            <span class="dropdown-item" data-toggle="modal" data-target="#delete_ticket"(click)="delete_holiday()"><i class="fa fa-trash-o m-r-5"></i> Delete</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Content -->
+    
+    <!-- **************************************************   add_Announcement ********************************* -->
+    <div  class="popup"i id="add_Announcement" >
+        <div class="popup1">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Announcement</h5>
+                    <button (click)="hide()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Announcement <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>Start <span class="text-danger">*</span></label>
+                            <div ><input class="form-control datetimepicker" type="date"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Start <span class="text-danger">*</span></label>
+                            <div ><input class="form-control datetimepicker" type="date"></div>
+                        </div>
+                        <div class="submit-section">
+                            <button class="btn btn-primary submit-btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+      <!-- **************************************************   edit_Announcement    ********************************* -->
+    <div class="popup"i  id="edit_Announcement" >
+        <div class="popup1">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Announcement</h5>
+                    <button  (click)="hide()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Announcement <span class="text-danger">*</span></label>
+                            <input class="form-control" value="New Year" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>Sart <span class="text-danger">*</span></label>
+                            <div ><input class="form-control datetimepicker" value="01-01-2019" type="date"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Sart <span class="text-danger">*</span></label>
+                            <div ><input class="form-control datetimepicker" value="01-01-2019" type="date"></div>
+                        </div>
+                        <div class="submit-section">
+                            <button class="btn btn-primary submit-btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+   
+  <!-- **************************************************  delete_Announcement   ********************************* -->
+    <div  class="popup"id="delete_Announcement" >
+        <div  class="popup1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="form-header">
+                        <h3>Delete Announcement</h3>
+                        <p>Are you sure want to delete?</p>
+                    </div>
+                    <div class="modal-btn delete-action">
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+                            </div>
+                            <div class="col-6">
+                                <a (click)="hide()" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+    
+
+        
+       
+        
+      
+        
+        
+      
+        
+       

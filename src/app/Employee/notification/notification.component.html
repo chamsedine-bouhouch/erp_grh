@@ -1,0 +1,38 @@
+<div class="content">
+
+    <div class="page-header">
+    <div class="row">
+    <div class="col-sm-12">
+    <h3 class="page-title">Notification</h3>
+    <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a (click)="dashbord()" >Dashboard</a></li>
+    <li class="breadcrumb-item active">Notification</li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    
+    <div class="row" *ngFor="let  notification of  Notification" >
+
+    <div class="col-md-12">
+    <div class="activity">
+    <div class="activity-box">
+    <ul class="activity-list">
+    <li>
+   
+    <div class="activity-content">
+    <div class="timeline-content">
+    <a  class="name">{{notification.name_sender}} {{notification.prename_sender}}</a> added new task <a >{{notification.notification_about}}</a>
+    <span class="time">{{notification.Date}}</span>
+    
+   
+    </div>
+    </div>
+  
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>

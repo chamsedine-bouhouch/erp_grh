@@ -1,0 +1,303 @@
+
+			
+    <!-- Page Content -->
+    <div class="content container-fluid">
+    
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">Leaves</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item" (click)="dashbord()">Dashboard</li>
+                        <li class="breadcrumb-item active">Leaves</li>
+                    </ul>
+                </div>
+                <div class="col-auto float-right ml-auto">
+                    <a  (click)="add_leave()" class="btn add-btn" data-toggle="modal" data-target="#add_leave"><i class="fa fa-plus"></i> Add Leave</a>
+                </div>
+            </div>
+        </div>
+        <!-- /Page Header -->
+        
+        <!-- Leave Statistics -->
+       
+        <!-- /Leave Statistics -->
+        
+        <!-- Search Filter -->
+        <div class="row filter-row">
+           <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">  
+                <div class="form-group form-focus">
+                    <input type="text" class="form-control floating"  [(ngModel)]="name_search">
+                    <label class="focus-label">Employee Name</label>
+                </div>
+           </div>
+           <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">  
+                <div class="form-group form-focus select-focus">
+                    <select class="select_floating"  [(ngModel)]="type_search"> 
+                        <option> </option>
+                        <option>Casual Leave</option>
+                        <option>Medical Leave</option>
+                        <option>Loss of Pay</option>
+                    </select>
+                    <label class="focus-label">Leave Type</label>
+                </div>
+           </div>
+           <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12"> 
+                <div class="form-group form-focus select-focus">
+                    <select class="select_floating"  [(ngModel)]="status_search"> 
+                        <option></option>
+                        
+                        <option> Approved </option>
+                        <option> Rejected </option>
+                    </select>
+                    <label class="focus-label">Leave Status</label>
+                </div>
+           </div>
+           <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">  
+                <div class="form-group form-focus">
+                    <div >
+                        <input class="form-control floating datetimepicker" type="date">
+                    </div>
+                   
+                </div>
+            </div>
+           <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">  
+                <div class="form-group form-focus">
+                    <div >
+                        <input class="form-control floating datetimepicker" type="date">
+                    </div>
+                   
+                </div>
+            </div>
+          
+        </div>
+        <!-- /Search Filter -->
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table mb-0 datatable">
+                        <thead>
+                            <tr>
+                                <th>Employee</th>
+                                <th>Leave Type</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>No of Days</th>
+                                <th>Reason</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr  *ngFor="let leaves of Leaves  | filter:name_search | filter:type_search | filter:status_search">
+                                <td>
+                                    <h2 class="table-avatar">
+                                        <a class="avatar"><img alt="" ></a>
+                                        <a >{{leaves.Name}} </a>
+                                    </h2>
+                                </td>
+                                <td>{{leaves.Leave_type}}</td>
+                                <td>{{leaves.From}}</td>
+                                <td>{{leaves.To}}</td>
+                                <td>{{leaves.No_of_Days}}</td>
+                                <td>{{leaves.Reason}}</td>
+                                <td>{{leaves.Status}}</td>
+
+                                <td class="text-right">
+                                    <div class="dropdown dropdown-action">
+                                        <span class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false" (click)="drp_down()"><i class="material-icons">more_vert</i></span>
+                                        <div id="drop_down" class="dropdown-menu dropdown-menu-right">
+                                            <span class="dropdown-item"  data-toggle="modal" data-target="#edit_ticket"(click)="edit_leaves()"><i class="fa fa-pencil m-r-5" ></i> Edit</span>
+                                            <span class="dropdown-item" data-toggle="modal" data-target="#delete_ticket"(click)="delete_leaves()"><i class="fa fa-trash-o m-r-5"></i> Delete</span>
+                                            <span class="dropdown-item"  data-toggle="modal" data-target="#edit_ticket"(click)="approve_leaves()"><i class="fa fa-pencil m-r-5" ></i> Approved</span>
+                                            <span class="dropdown-item" data-toggle="modal" data-target="#delete_ticket"(click)="reject_leaves()"><i class="fa fa-trash-o m-r-5"></i> Rejected</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                           
+                           
+                           
+                            
+                            
+                            
+                           
+                            
+                           
+                         
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Content -->
+    
+    <!-- Add Leave Modal -->
+    <div   class="pop_up" id="add_leave" >
+    <div    role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Leave</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"   (click)="hide()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Leave Type <span class="text-danger">*</span></label>
+                            <select class="select">
+                                <option>Select Leave Type</option>
+                                <option>Casual Leave 12 Days</option>
+                                <option>Medical Leave</option>
+                                <option>Loss of Pay</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>From <span class="text-danger">*</span></label>
+                            <div >
+                                <input  id="from_date"class="form-control datetimepicker" type="date">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>To <span class="text-danger">*</span></label>
+                            <div >
+                                <input  id="to_date"class="form-control datetimepicker" type="date">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Number of days <span class="text-danger">*</span></label>
+                            <input class="form-control" readonly type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>Remaining Leaves <span class="text-danger">*</span></label>
+                            <input class="form-control" readonly value="12" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>Leave Reason <span class="text-danger">*</span></label>
+                            <textarea rows="4" class="form-control"></textarea>
+                        </div>
+                        <div class="submit-section">
+                            <button class="btn btn-primary submit-btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- /Add Leave Modal -->
+    
+    <!-- Edit Leave Modal -->
+    <div  class="pop_up" id="edit_leave" >
+<div   role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Leave</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"  (click)="hide()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Leave Type <span class="text-danger">*</span></label>
+                            <select class="select">
+                                <option>Select Leave Type</option>
+                                <option>Casual Leave 12 Days</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>From <span class="text-danger">*</span></label>
+                            <div class="cal-icon">
+                                <input class="form-control datetimepicker" value="01-01-2019" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>To <span class="text-danger">*</span></label>
+                            <div class="cal-icon">
+                                <input class="form-control datetimepicker" value="01-01-2019" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Number of days <span class="text-danger">*</span></label>
+                            <input class="form-control" readonly type="text" value="2">
+                        </div>
+                        <div class="form-group">
+                            <label>Remaining Leaves <span class="text-danger">*</span></label>
+                            <input class="form-control" readonly value="12" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>Leave Reason <span class="text-danger">*</span></label>
+                            <textarea rows="4" class="form-control">Going to hospital</textarea>
+                        </div>
+                        <div class="submit-section">
+                            <button class="btn btn-primary submit-btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- /Edit Leave Modal -->
+
+    <!-- Approve Leave Modal -->
+    <div  id="approve_leave"  class="pop_up" >
+        <div  id="p_center" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="form-header">
+                        <h3>Leave Approve</h3>
+                        <p>Are you sure want to approve for this leave?</p>
+                    </div>
+                    <div class="modal-btn delete-action">
+                        <div class="row">
+                            <div class="col-6">
+                                <a  class="btn btn-primary continue-btn">Approve</a>
+                            </div>
+                            <div class="col-6">
+                                <a  (click)="hide()" data-dismiss="modal" class="btn btn-primary cancel-btn">Decline</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- /Approve Leave Modal -->
+    
+    <!-- Delete Leave Modal -->
+    <div   class="pop_up" id="delete_approve" >
+        <div  id="p_center">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="form-header">
+                        <h3>Delete Leave</h3>
+                        <p>Are you sure want to delete this leave?</p>
+                    </div>
+                    <div class="modal-btn delete-action">
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn" (click)="hide()">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- /Delete Leave Modal -->
+    

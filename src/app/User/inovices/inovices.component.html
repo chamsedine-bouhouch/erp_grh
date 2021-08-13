@@ -1,0 +1,104 @@
+<!---
+<div class="container">
+  <div class="card inner-main">
+    <div class="card-header">
+      User Profile
+      <a class="nav-link navbar-brand" href="#" routerLink="/logout">Logout</a>
+    </div>
+    <div class="card-body">
+      <p class="card-text">Name: <strong>{{ UserProfile?.name }}</strong></p>
+      <p class="card-text">Email: <strong>{{ UserProfile?.email }}</strong></p>
+    </div>
+  
+  </div>
+</div>
+
+-->
+
+<div class="mp-box mp-box-wide">
+    <div class="box-row p-b-100">
+  <div class="boxed">
+  
+  <!--  
+  <nav class="my-activities-nav nav-bordered">
+  <ul>
+   <li>Requests</li>
+  </ul>
+  </nav>
+  -->
+  
+  
+  <div class="request-table-toolbar">
+  <input type="search"  id="quick-search" value="" placeholder="Search requests" class="requests-search" aria-required="false" name="search"  autocomplete="off">
+  <div class="request-table-filters">
+  
+  
+  <label class="request-filter" for="request-status-select">Status:</label>
+  <select name="status" id="request-status-select" class="request-filter" aria-required="false"><option value="">Any</option>
+  <option value="open">paid</option>
+  <option value="answered">pending</option>
+  <option value="solved">unpaid</option></select>
+  </div>
+  </div>
+  
+  <div class="my-activities-table">
+  
+  
+  
+  <table id="request-table" class="request-table my-requests">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>
+        
+        Amount
+        
+      </th>
+      <th>Due Date</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      <tr *ngFor="let Inovice of Inovice ">
+        <td>{{Inovice.id}}</td>
+        <td>
+          <button routerLink="/inovices_view" >
+            
+            {{Inovice.Subject}}
+            
+          </button>
+        </td>
+        <td>
+          
+             {{Inovice.Created}}
+          
+        </td>
+        <td>{{Inovice.Last_activity}}</td>
+        <td>
+          <span class="request-status request-solved" title="This request has been solved">
+            {{Inovice.Status}}
+          </span>
+        </td>
+        <td> <button  >
+            
+         pay
+          
+        </button></td>
+      </tr>
+    
+     
+    
+      
+    
+  </tbody>
+  </table>
+  <br>
+  
+  <button style="background-color: white"  routerLink="/Get_quote">Get a quote</button>
+  </div>
+  
+  </div>
+  </div></div>
